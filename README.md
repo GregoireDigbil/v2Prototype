@@ -1,7 +1,7 @@
 Prototype to test a few ideas.
 
 ## ES6
-With `6to5` and the [es6-shim](https://github.com/paulmillr/es6-shim) it's
+With [6to5](https://github.com/sebmck/6to5) and the [es6-shim](https://github.com/paulmillr/es6-shim) it's
 possible to write es6 javascript today \o/.
 This requires `node 0.11` with `--harmony` flag. Since some of es6 features
 are already supported (`let`, `generators`, `iterators`) they are not
