@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
+var sourcemaps = require('gulp-sourcemaps');
 var to5 = require('gulp-6to5');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
@@ -15,7 +16,9 @@ gulp.task('to5', function() {
     .pipe(plumber({
         errorHandler: notify.onError('Error: <%= error.message %>')
     }))
+    .pipe(sourcemaps.init())
     .pipe(to5(to5ops))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist'));
 });
 
